@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Image Processor</title>
+    <style>
+		body {
+        background-color: #cb81da;
+        color: #050404;
+        font-family: Monospace, Display;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .image-container {
+        margin: 20px;
+        text-align: center;
+      }
+      .image-container img {
+        max-width: 400px;
+      }
+      #text-container {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Image Processor</h1>
+    {% if error %}
+      <p style="color: red">{{ error }}</p>
+    {% endif %}
+    <form action="/" method="POST" enctype="multipart/form-data">
+      <input type="file" name="image">
+      <button type="submit">Process Image</button>
+    </form>
+    {% if image %}
+      <div class="container">
+        <div class="image-container">
+          <h3>Original Image</h3>
+          <img src="data:image/png;base64,{{ image }}" alt="Original Image">
+        </div>
+        <div class="image-container">
+          <h3>Black and White Image</h3>
+          <img src="data:image/png;base64,{{ bw_image }}" alt="Black and White Image">
+        </div>
+        <div class="image-container">
+          <h3>Grayscale Image</h3>
+          <img src="data:image/png;base64,{{ gs_image }}" alt="Grayscale Image">
+        </div>
+      </div>
+      {% if text %}
+        <div id="text-container" style="text-align: center;">
+          <h3>Hashtags for your Post</h3>
+          <textarea rows="10" cols="50" readonly>{{text}}</textarea>
+        </div>
+      {% endif %}
+	</div>
+      <form action="/" method="GET">
+        <button type="submit">Upload New Image</button>
+      </form>
+    {% endif %}
+  </body>
+</html>
