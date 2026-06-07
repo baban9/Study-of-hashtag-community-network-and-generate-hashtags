@@ -1,13 +1,65 @@
-# HashTagging
+# Hashtag Community Network and Image Captioning
 
-This project entails two different objectives of tackling problems in the domain of Generative AI pertaining to NLP.
+Two-track NLP and graph analytics project: a Flask app for image-to-text captioning with hashtag generation, and Instagram hashtag co-occurrence network analysis.
 
-Firstly,
+## Problem
 
-* hashtagApp
-  * This app enables the users to input an RGB image and outputs a text information in the image.
-  * The text input can be leveraged to generate hashtags for the image.
-  * Additionally, the app also spits out 2 other variants of the image, black and white, and grey scale, which can further be used to augment as per the user use cases. for example, Upscaling of the quality of the image, remove background, etc.
-* hashTag_community_analysis
-  * This analysis is done on scrapped data from Instagram posts and a network from the connectivity of the hashtags, i.e, co-occurences, of them with each other.
-  * We created a metadata as well as a small Network analysis, which can narrow down the hashtag search and gives the intuition of having more hashtags together to uplift the likes on the image.
+1. **Product track**: Help users generate relevant hashtags from image content.
+2. **Research track**: Model hashtag communities from co-occurrence networks to inform content strategy.
+
+## Approach
+
+### Track A: Image captioning app (`hashtagApp/`)
+
+- Upload RGB image via Flask UI
+- Extract text/caption features with a pretrained vision model
+- Return original, grayscale, and B&W variants for downstream augmentation
+
+### Track B: Community analysis (`hashTag_community_analysis/`)
+
+- Scrape and prepare Instagram hashtag co-occurrence data
+- Build network graph and detect communities
+- Analyze like counts vs hashtag cluster membership
+
+## Repository structure
+
+```
+hashtagApp/
+  app.py              Flask web application
+  model.py            Vision model wrapper
+  utils.py            Image and text utilities
+  templates/          Web UI
+hashTag_community_analysis/
+  Analyze_hashtag_communities.ipynb
+  prepare_likes_occurence_data.py
+  config.py
+file_downloader.py    Data ingestion helper
+model/                Model artifacts and class index
+```
+
+## Reproducibility
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+make setup
+make run
+```
+
+Community analysis:
+
+```bash
+jupyter lab hashTag_community_analysis/Analyze_hashtag_communities.ipynb
+```
+
+## Tech stack
+
+Python 3, Flask, PIL, PyTorch/TensorFlow (model-dependent), NetworkX, Jupyter
+
+## Limitations and next steps
+
+- Containerize app and model with Docker Compose
+- Add API endpoint for programmatic hashtag suggestions
+- Document scraping compliance and data retention policy
+- Version model weights separately from source code
