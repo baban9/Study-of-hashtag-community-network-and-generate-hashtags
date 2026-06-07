@@ -1,8 +1,13 @@
-flask>=3.0.0
-pillow>=10.0.0
-torch>=2.0.0
-torchvision>=0.15.0
-networkx>=3.1
-pandas>=2.0.0
-jupyterlab>=4.0.0
-numpy>=1.24.0
+flask>=3.0.3
+pillow>=10.4.0
+torch>=2.4.1
+torchvision>=0.19.1
+networkx>=3.4.2
+pandas>=2.2.3
+jupyterlab>=4.2.5
+numpy>=1.26.4
+
+# Transitive security pins
+urllib3>=2.2.2
+certifi>=2024.8.30
+idna>=3.7
