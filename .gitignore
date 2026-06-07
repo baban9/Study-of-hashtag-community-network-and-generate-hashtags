@@ -5,3 +5,5 @@ venv/
 .DS_Store
 .ipynb_checkpoints/
 scrappedData/
+.matplotlib/
+.pytest_cache/

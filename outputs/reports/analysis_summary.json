@@ -1,0 +1,81 @@
+{
+  "data_source": "synthetic",
+  "meta_csv": "/Users/babandeepsingh/Desktop/personal-github/Study-of-hashtag-community-network-and-generate-hashtags/research/data/synthetic_hashtag_meta_data.csv",
+  "graph_summary": {
+    "nodes": 49,
+    "edges": 1076,
+    "density": 0.9149659863945578,
+    "avg_degree": 43.91836734693877,
+    "components": 1
+  },
+  "modularity": 0.28846012758834416,
+  "num_communities": 6,
+  "community_stats": [
+    {
+      "community_id": 0,
+      "member_count": 9,
+      "avg_weighted_degree": 300.3333333333333,
+      "top_hashtag": "outfit"
+    },
+    {
+      "community_id": 3,
+      "member_count": 9,
+      "avg_weighted_degree": 291.6666666666667,
+      "top_hashtag": "gallery"
+    },
+    {
+      "community_id": 1,
+      "member_count": 8,
+      "avg_weighted_degree": 295.5,
+      "top_hashtag": "training"
+    },
+    {
+      "community_id": 2,
+      "member_count": 8,
+      "avg_weighted_degree": 288.125,
+      "top_hashtag": "travel"
+    },
+    {
+      "community_id": 5,
+      "member_count": 8,
+      "avg_weighted_degree": 313.25,
+      "top_hashtag": "developer"
+    },
+    {
+      "community_id": 4,
+      "member_count": 7,
+      "avg_weighted_degree": 301.0,
+      "top_hashtag": "foodie"
+    }
+  ],
+  "correlations": [
+    {
+      "metric": "weighted_degree",
+      "pearson_r": 0.19681436853916384,
+      "pearson_p": 0.17527899131243127,
+      "spearman_r": 0.2518242617658645,
+      "spearman_p": 0.08089514328641566
+    },
+    {
+      "metric": "betweenness",
+      "pearson_r": -0.014107886481278267,
+      "pearson_p": 0.9233533633580339,
+      "spearman_r": -0.034081632653061224,
+      "spearman_p": 0.81616512712711
+    },
+    {
+      "metric": "eigenvector",
+      "pearson_r": 0.18030459027705217,
+      "pearson_p": 0.21507148024389122,
+      "spearman_r": 0.2471428571428571,
+      "spearman_p": 0.08689488513260817
+    }
+  ],
+  "figures": [
+    "/Users/babandeepsingh/Desktop/personal-github/Study-of-hashtag-community-network-and-generate-hashtags/outputs/figures/01_community_network.png",
+    "/Users/babandeepsingh/Desktop/personal-github/Study-of-hashtag-community-network-and-generate-hashtags/outputs/figures/02_degree_distribution.png",
+    "/Users/babandeepsingh/Desktop/personal-github/Study-of-hashtag-community-network-and-generate-hashtags/outputs/figures/03_community_sizes.png",
+    "/Users/babandeepsingh/Desktop/personal-github/Study-of-hashtag-community-network-and-generate-hashtags/outputs/figures/04_centrality_vs_likes.png",
+    "/Users/babandeepsingh/Desktop/personal-github/Study-of-hashtag-community-network-and-generate-hashtags/outputs/figures/05_top_hashtags_by_degree.png"
+  ]
+}

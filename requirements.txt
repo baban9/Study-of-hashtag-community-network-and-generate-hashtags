@@ -1,11 +1,18 @@
 flask>=3.0.3
 pillow>=10.4.0
-torch>=2.4.1
-torchvision>=0.19.1
-networkx>=3.4.2
-pandas>=2.2.3
-jupyterlab>=4.2.5
+networkx>=3.2.1,<3.3
+pandas>=2.0.0
 numpy>=1.26.4
+matplotlib>=3.8.0
+scipy>=1.11.0
+python-louvain>=0.16
+reportlab>=4.2.0
+pytest>=8.0.0
+jupyterlab>=4.2.5
+
+# Optional: image captioning app (large download)
+torch>=2.0.0; python_version >= "3.10"
+torchvision>=0.15.0; python_version >= "3.10"
 
 # Transitive security pins
 urllib3>=2.2.2
